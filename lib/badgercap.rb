@@ -1,0 +1,2 @@
+module Badgercap
+end
