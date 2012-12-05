@@ -1,3 +1,5 @@
+** This is a work in progress... **
+
 # Badgercap
 
 Some Capistrano recipies for deploying Rails apps to VPSs.
