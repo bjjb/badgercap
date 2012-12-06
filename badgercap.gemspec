@@ -11,8 +11,11 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{This gem simplifies deployment of Rails apps to a VPS cluster}
   gem.homepage      = "http://github.com/jjbuckley/badgercap"
 
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'minitest'
+  gem.add_development_dependency 'mocha'
+
   gem.add_dependency 'capistrano'
-  gem.add_dependency 'rvm-capistrano'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

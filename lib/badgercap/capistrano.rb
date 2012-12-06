@@ -1,7 +1,11 @@
-# Peppers the current Capistrano configuration instance with some Badgercap.
+require 'badgercap'
+Capistrano::Configuration.instance(true).load do
+  load_paths << Badgercap.load_path
+end
+
+Capistrano.plugin :badgercap, Badgercap
+__END__
 # Mostly from http://railscasts.com/episodes/337-capistrano-recipes
-module Capistrano
-  Configuration.instance(true).load do
     _cset(:packages, %w(nginx monit postgresql)) unless exists? :packages
 
     namespace :install do
